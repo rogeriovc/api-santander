@@ -3,9 +3,20 @@
 namespace App\Dto;
 
 class UsuarioDto{
+    private ?string $cpf = null;
     private string $nome;
     private string $email;
+    private ?string $senha = null;
     private string $telefone;
+    
+    public function getCpf(){
+        return $this->cpf;
+    }
+
+    public function setCpf($cpf){
+        $this->cpf = $cpf;
+        return $this;
+    }
 
     public function getNome(){
         return $this->nome;
@@ -22,6 +33,15 @@ class UsuarioDto{
 
      public function setEmail($email){
         $this->email = $email;
+        return $this;
+    }
+
+     public function getSenha(){
+        return $this->senha;
+    }
+
+    public function setSenha($senha){
+        $this->senha = $senha;
         return $this;
     }
 
